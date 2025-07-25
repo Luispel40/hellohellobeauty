@@ -631,10 +631,7 @@ a {
 .faq {
     padding-top: 40px;
     padding-bottom: 40px;
-    
-    & .column {
-        gap: 10px;
-    }
+    gap: 20px;
 }
 .accordion {
       background-color: #f9f9f9;
