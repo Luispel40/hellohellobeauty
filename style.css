@@ -142,6 +142,7 @@ button {
     background-color: var(--rosa);
     color: var(--rosa-claro);
     padding: 2px 10px;
+    margin: auto;
 
     &.verde {
         background-color: var(--verde);
@@ -206,7 +207,8 @@ h3,
 h4,
 h5,
 h6 {
-    max-width: 600px;
+    width: min(600px 100%);
+    margin: 0 auto;
 }
 
 .carousel {
@@ -558,6 +560,7 @@ h6 {
                 align-items: center;
                 gap: 10px;
                 margin-bottom: 10px;
+                align-self: flex-start;
 
                 & span {
                     font-size: 3rem;
@@ -568,6 +571,29 @@ h6 {
     }
 }
 
+[border="white"] {
+    border: 2px solid #fff;
+}
+
+.nine {
+    background: linear-gradient(to bottom, var(--rosa), transparent),
+        url("img/waves\ copiar.webp") no-repeat center center fixed,
+        linear-gradient(to bottom, var(--rosa), var(--rosa-claro));
+    background-size: cover;
+    color: #fff;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    & img {
+        width: 400px;
+        margin: 0 -80px 0 0;
+        z-index: 9;
+    }
+
+    & .box-white {
+        padding: 60px;
+    }
+}
 
 
 
@@ -600,5 +626,100 @@ a {
     100% {
         transform: rotate(360deg);
         filter: blur(0);
+    }
+}
+.faq {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+    & .column {
+        gap: 10px;
+    }
+}
+.accordion {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      cursor: pointer;
+      padding: 15px 20px;
+      font-weight: bold;
+      position: relative;
+      transition: background-color 0.3s ease;
+    }
+
+    .accordion-header:hover {
+      background-color: #f1f1f1;
+    }
+
+    .accordion-header::after {
+      content: '+';
+      position: absolute;
+      right: 20px;
+      font-size: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .accordion-header.active::after {
+      content: '−';
+    }
+
+    .accordion-content {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      background-color: #fff;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .accordion-content.open {
+      padding: 15px 20px;
+    }
+
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .section {
+        padding: 40px 20px;
+        width: 100% !important;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+
+
+    .column {
+        flex-direction: column !important;
+    }
+
+    img {
+        max-width: 350px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+
+
+
+    .box-white {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .card {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .seven {
+        background-position: bottom;
+        margin: 0 !important;
+        padding:  0 !important;
     }
 }

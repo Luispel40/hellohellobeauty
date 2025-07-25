@@ -44,3 +44,29 @@ const flutuateItems = () => {
 }
 
 window.addEventListener('scroll', flutuateItems);
+
+const headers = document.querySelectorAll('.accordion-header');
+
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const openContent = document.querySelector('.accordion-content.open');
+        const openHeader = document.querySelector('.accordion-header.active');
+
+        if (openContent && openContent !== header.nextElementSibling) {
+          openContent.style.maxHeight = null;
+          openContent.classList.remove('open');
+          openHeader.classList.remove('active');
+        }
+
+        header.classList.toggle('active');
+        const content = header.nextElementSibling;
+
+        if (content.classList.contains('open')) {
+          content.style.maxHeight = null;
+          content.classList.remove('open');
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.classList.add('open');
+        }
+      });
+    });
