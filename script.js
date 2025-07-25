@@ -24,7 +24,7 @@ function updateCarousel() {
     //  scrool smooth from 0 to 1
     const scrollAmount = currentSlide / (slides.length - 1);
     carousel.scrollTo({
-        left: scrollAmount ,
+        left: scrollAmount,
         behavior: 'smooth',
     });
     carousel.style.transform = `translateX(-${scrollAmount * 1700}px)`;
@@ -33,3 +33,14 @@ function updateCarousel() {
     });
 
 }
+
+const itemsFlutuate = document.querySelectorAll('.item-flutuate')
+
+const flutuateItems = () => {
+    itemsFlutuate.forEach(item => {
+        const scrollY = window.scrollY;
+        item.style.transform = `translateY(${scrollY * -0.5 + 2600}px) rotate(${scrollY * -0.1}deg)`;
+    })
+}
+
+window.addEventListener('scroll', flutuateItems);
