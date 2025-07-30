@@ -24,7 +24,7 @@ html {
 .current-title {
     padding-top: 40px;
     padding-bottom: 40px;
-    background: var(--rosa);
+    background: var(--verde);
     overflow-x: hidden;
     overflow-y: visible;
     z-index: 99;
@@ -38,7 +38,6 @@ html {
     }
 
     &.out {
-        background: var(--verde);
 
         .my-title {
             animation-direction: normal;
