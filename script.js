@@ -70,3 +70,21 @@ const headers = document.querySelectorAll('.accordion-header');
         }
       });
     });
+
+    const autoDate = document.querySelector('.auto-date');
+    const date = new Date();
+    const updateDateAutomatic = () => {
+        // dia atual + 10
+        if (date.getDate() + 10 > 30) {
+            date.setDate(1);
+            date.setMonth(date.getMonth() + 1);
+        } else {
+            date.setDate(date.getDate() + 5);
+        }
+        const dia = date.getDate();
+        const mes = date.getMonth() + 1;
+        const ano = date.getFullYear();
+        autoDate.textContent = `${dia}/${mes}/${ano}`;
+    }
+
+    updateDateAutomatic();
