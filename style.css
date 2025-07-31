@@ -80,12 +80,14 @@ html {
     background: url("img/principal.webp") bottom right, url("img/hearts.webp"), radial-gradient(circle, #79e098 30%, var(--verde) 50%);
     background-size: contain;
     background-repeat: no-repeat;
+    text-align: left;
 
     & .column {
         align-items: flex-start;
         justify-content: space-between;
         height: 80%;
         padding: 0;
+        padding: 0px 0px 0px 50px;
 
         & .first-title {
             text-transform: uppercase;
@@ -102,7 +104,7 @@ html {
             & h1 {
                 font-size: 2rem;
                 font-weight: 600;
-                padding: 0px 20px;
+                padding: 0px;
                 border-radius: 2px;
                 text-wrap: balance;
             }
@@ -230,9 +232,8 @@ h6 {
         flex-direction: row;
         flex-wrap: nowrap;
         gap: 20px;
-        /*mostrar primeira posição */
         position: relative;
-        left: 700px;
+        left: 820px;
         transition: 0.3s ease-in-out;
 
 
@@ -807,6 +808,23 @@ a {
         margin-bottom: 20px;
     }
 
+
+    .header {
+        height: 67vh;
+        text-align: center;
+        padding-top: 10px;
+
+        & .column {
+            padding: 20px 0;
+            height: 100%;
+
+            & .first-title {
+                margin: 10px auto;
+                font-size: 1.8rem;
+                font-weight: 600;
+            }
+        }
+    }
 
 
     .box-white {
