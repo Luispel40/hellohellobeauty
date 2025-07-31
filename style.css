@@ -678,9 +678,19 @@ h6 {
         color: #fff;
         border: none;
         border-radius: 0px;
-        align-self: flex-end;
+        position: absolute;
+        bottom: 0;
     }
 
+    & .best-offer::before {
+        content: "melhor oferta!";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        background-color: var(--verde);
+        color: #fff;
+        padding: 5px 10px;
+    }
 
 }
 
