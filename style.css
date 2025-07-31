@@ -909,5 +909,18 @@ a {
         background-position: bottom;
         margin: 0 !important;
         padding: 0 !important;
+
+        & .box-white {
+            margin: 0 !important;
+            padding: 20px !important;
+            flex-direction: column;
+            font-size: 1.2rem;
+            width: 100% !important;
+            height: fit-content !important;
+
+            & p {
+                font-size: large;
+            }
+        }
     }
 }
