@@ -706,6 +706,7 @@ h6 {
                 border-radius: 10px;
                 position: relative;
                 top: -350px;
+                text-transform: uppercase;
             }
         }
     }
@@ -885,6 +886,8 @@ a {
             & .discount {
                 margin: 0 !important;
                 max-height: fit-content !important;
+                padding: 10px !important;
+                width: 100% !important;
             }
         }
 
@@ -892,11 +895,6 @@ a {
         position: static !important;
         margin: 20px !important;
         padding: 20px 0 !important;
-    }
-
-    .offer-body {
-        display: flex;
-        height: fit-content !important;
     }
 
     .card {
