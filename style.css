@@ -32,6 +32,9 @@ html {
 
     & .my-title {
         color: #fff;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
         white-space: nowrap;
         font-size: medium;
         animation: walk 30s linear infinite reverse;
@@ -269,6 +272,7 @@ h6 {
             justify-content: center;
             align-items: center;
             cursor: pointer;
+            margin: 0 auto;
         }
     }
 }
@@ -716,8 +720,8 @@ h6 {
         color: #fff;
         border: none;
         border-radius: 0px;
-        position: absolute;
-        bottom: 0;
+        position: relative;
+        bottom: -20px;
     }
 
     & .best-offer::before {
